@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-1
+spec:
+  storageClassName: standard # É o nome do PV que será usado. PV/PVC não usam label
+  capacity:
+    storage: 1Gi
+  # volumeMode: Filesystem # Filesystem is default
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: '/Users/lucasnoman/Documents/Dev/Codes/Alura/Kubernetes-2/volumes/persistent-volume'
+  persistentVolumeReclaimPolicy: Retain

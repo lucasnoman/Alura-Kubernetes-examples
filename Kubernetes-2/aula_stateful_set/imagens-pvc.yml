@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: imagens-pvc
+spec:
+  storageClassName: sistema-noticias-sc # ao não usar SCN, o pvc deveria dar bind automático com algum SC
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi

@@ -1,0 +1,10 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: sistema-noticias-sc
+provisioner: kubernetes.io/no-provisioner
+parameters:
+  type: Directory
+  path: /Users/lucasnoman/Documents/Dev/Codes/Alura/Kubernetes-2/volumes/storage-class
+  fstype: ext4
+# volumeBindingMode: WaitForFirstConsumer
